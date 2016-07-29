@@ -130,5 +130,22 @@ namespace WinProj_Class
             Console.WriteLine("{0} {1}", s1.getCount(), s2.getCount());
            
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Teacher t1 = new Teacher();
+            //get預設建構子
+            //Console.WriteLine("Age: {0} name: {1} major: {2}", t1.Age, t1.Name, t1.major);
+            t1.ShowInfo();
+            //set value to 建構子
+            t1.Age = 28;
+            t1.Name = "Jammy";
+            t1.major = "Math";
+            //Console.WriteLine("Age: {0} name: {1} major: {2}", t1.Age, t1.Name, t1.major);
+            t1.ShowInfo();
+
+            t1.setCount();//不加static 每按一次button count離開迴圈變數會變回去
+            Console.WriteLine("count: {0}", t1.getCount());
+        }
     }
 }
